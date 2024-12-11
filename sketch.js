@@ -9,8 +9,10 @@ function inputGridSide() {
         while (container.firstChild) {
             container.removeChild(container.firstChild)
         }
-        input = prompt("Enter squares per side.");
-        makeGrid(input);
+        input = prompt("Enter squares per side. Accepts 100 max.");
+        if (input < 101) {
+            makeGrid(input);
+        } else return
     })
     
 }
@@ -29,7 +31,10 @@ function makeGrid (gridSide) {
         newBox.style.height = `${boxSize}px`;
         
         newBox.addEventListener("mouseenter", () => {
-            newBox.style.backgroundColor = "black";
+            let colorr = Math.floor(Math.random()* 255)
+            let colorg = Math.floor(Math.random()* 255)
+            let colorb = Math.floor(Math.random()* 255)
+            newBox.style.backgroundColor = `rgb(${colorr}, ${colorg}, ${colorb})`;
         })
     
         newBox.addEventListener("mouseleave", () => {
