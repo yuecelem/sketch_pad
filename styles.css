@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    max-width: 960px;
+    /* max-height: 960px; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* .box {
+    width: 2rem;
+    height: 2rem;
+    border: solid 2px black;
+} */
