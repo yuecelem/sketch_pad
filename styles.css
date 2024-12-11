@@ -1,15 +1,31 @@
 * {
     box-sizing: border-box;
 }
-
+body {
+    display: flex;
+    flex-direction: column;
+    border: 2px orange solid;
+    max-width: 1060px;
+}
 #container {
     display: flex;
     max-width: 960px;
     /* max-height: 960px; */
     flex-wrap: wrap;
     justify-content: center;
+    align-self: center;
+    margin-bottom: 60px;
 }
 
+button {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 150px;
+    height: 50px;
+    align-self: center;
+
+
+}
 /* .box {
     width: 2rem;
     height: 2rem;
