@@ -1,11 +1,23 @@
 const container = document.querySelector("#container");
+const chooseGridSideSize = document.querySelector("#chooseGridSideSize")
 
+function inputGridSide() {
 
+    let input = ''
+
+    chooseGridSideSize.addEventListener("click", () => {
+        while (container.firstChild) {
+            container.removeChild(container.firstChild)
+        }
+        input = prompt("Enter squares per side.");
+        makeGrid(input);
+    })
+    
+}
 
 function makeGrid (gridSide) {
 
     let boxSize = 960 / gridSide;
-    console.log(boxSize)
 
     for (let i = 0; i < (gridSide * gridSide); i++){
 
@@ -27,8 +39,6 @@ function makeGrid (gridSide) {
 
 
         container.appendChild(newBox);
-
-        
     }
 
     
@@ -37,4 +47,5 @@ function makeGrid (gridSide) {
 
 
 
-makeGrid(77);
+makeGrid(16);
+inputGridSide()
